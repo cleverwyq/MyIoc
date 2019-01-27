@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="UserDao" class="hello.UserDao">
+        <property name="name" value="Young"></property>
+        <property name="age"    value="33"/>
+    </bean>
+    <bean id="Wrapper" class="hello.Wrapper">
+        <constructor-arg name="ud" ref="UserDao"></constructor-arg>
+    </bean>
+    <bean id="Wrapper2" class="hello.Wrapper">
+
+    </bean>
+</beans>
