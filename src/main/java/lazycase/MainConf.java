@@ -1,9 +1,6 @@
 package lazycase;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class MainConf {
@@ -15,6 +12,7 @@ public class MainConf {
 
     @Lazy
     @Bean(name="user")
+    @Scope("prototype")
     User getUser(String y) {
         System.out.println("User created!");
         return new User(y, 32);
