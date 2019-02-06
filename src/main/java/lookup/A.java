@@ -3,11 +3,10 @@ package lookup;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public abstract class A {
-//    private B b;
-
 
     public B getB() {
         return getEntity();
